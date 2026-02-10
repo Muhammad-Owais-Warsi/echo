@@ -3,7 +3,9 @@
 const io = require("socket.io-client");
 const pty = require("node-pty");
 
-const socket = io("http://localhost:3000");
+const FRONTEND = "https://echo-dsbr.onrender.com";
+
+const socket = io("https://echo-backend-aj96.onrender.com");
 const args = process.argv.slice(2);
 const isEditable = args.includes("--edit");
 
@@ -13,9 +15,7 @@ socket.on("connect", () => {
 
 socket.on("session-created", (roomId) => {
     const roomStr = String(roomId);
-    console.log(
-        `\n SHARING ACTIVE | ROOM: http://localhost:5173/share/${roomStr}\n`,
-    );
+    console.log(`\n SHARING ACTIVE | ROOM: ${FRONTEND}/share/${roomStr}\n`);
     console.log(
         `MODE: ${isEditable ? "Writable (Editing Enabled)" : "Read-Only"}`,
     );

@@ -1,17 +1,21 @@
 {
-    "name": "server",
+    "name": "echo-terminal",
     "version": "1.0.0",
-    "description": "",
+    "description": "Real-time terminal sharing for collaboration and demonstration.",
     "main": "index.js",
     "bin": {
-        "share": "./cli.js"
+        "echo-terminal": "./cli.js"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node index.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Muhammad Owais Warsi",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Muhammad-Owais-Warsi/echo"
+    },
     "dependencies": {
         "cors": "^2.8.6",
         "express": "^5.2.1",
