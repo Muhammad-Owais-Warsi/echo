@@ -128,7 +128,7 @@ export default function Landing() {
                                     </h3>
                                     <div className="relative group">
                                         <div className="px-4 py-3 bg-zinc-900 rounded-lg font-mono text-sm text-zinc-300">
-                                            echo start
+                                            echo-terminal
                                         </div>
                                         <button
                                             onClick={() =>
