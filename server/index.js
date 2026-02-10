@@ -53,6 +53,13 @@ io.on("connection", (socket) => {
     });
 });
 
+app.get("/", (req, res) => {
+    console.log("Root route accessed");
+
+    // Send a response to the user so the browser doesn't hang
+    res.status(200).send("Server is live!");
+});
+
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
