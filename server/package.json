@@ -1,6 +1,6 @@
 {
     "name": "echo-terminal",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Real-time terminal sharing for collaboration and demonstration.",
     "main": "index.js",
     "bin": {

@@ -5,7 +5,7 @@ const pty = require("node-pty");
 
 const FRONTEND = "https://echo-dsbr.onrender.com";
 
-const socket = io("https://echo-backend-aj96.onrender.com");
+const socket = io("https://echo-backend-aw1g.onrender.com");
 const args = process.argv.slice(2);
 const isEditable = args.includes("--edit");
 
