@@ -133,7 +133,7 @@ export default function Landing() {
                                         <button
                                             onClick={() =>
                                                 copyToClipboard(
-                                                    "echo start",
+                                                    "echo-terminal",
                                                     setCopied2,
                                                 )
                                             }
