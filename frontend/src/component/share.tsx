@@ -19,7 +19,7 @@ export default function Share() {
 
         term.current = new Terminal({
             cursorBlink: true,
-            fontSize: 14,
+            fontSize: window.innerWidth < 640 ? 12 : 14,
             lineHeight: 1.4,
             fontFamily:
                 '"Fira Code", "Cascadia Code", "JetBrains Mono", monospace',
@@ -166,20 +166,20 @@ export default function Share() {
     return (
         <div className="h-screen bg-zinc-950 flex flex-col">
             <header className="border-b border-zinc-800">
-                <div className="flex items-center justify-between px-6 py-3">
-                    <div className="flex items-center gap-6">
-                        <h1 className="text-sm font-medium text-zinc-100">
+                <div className="flex items-center justify-between gap-2 px-3 sm:px-6 py-3">
+                    <div className="flex items-center gap-2 sm:gap-6 min-w-0">
+                        <h1 className="text-sm font-medium text-zinc-100 shrink-0">
                             Echo
                         </h1>
                         <button
                             onClick={copySessionId}
-                            className="px-3 py-1.5 text-xs font-mono bg-zinc-900 border border-zinc-800 rounded-md text-zinc-400 hover:text-zinc-300 hover:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-700"
+                            className="max-w-[140px] sm:max-w-none truncate px-3 py-1.5 text-xs font-mono bg-zinc-900 border border-zinc-800 rounded-md text-zinc-400 hover:text-zinc-300 hover:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-700"
                         >
                             {copied ? "Copied!" : id}
                         </button>
                     </div>
 
-                    <div className="flex items-center gap-2 text-sm text-zinc-400">
+                    <div className="flex items-center gap-2 text-sm text-zinc-400 shrink-0">
                         <span
                             className={`w-2 h-2 rounded-full ${
                                 connected > 0 ? "bg-emerald-500" : "bg-zinc-700"
@@ -192,7 +192,7 @@ export default function Share() {
                 </div>
             </header>
 
-            <main className="flex-1 p-6 overflow-hidden">
+            <main className="flex-1 p-2 sm:p-6 overflow-hidden">
                 <div
                     ref={terminalRef}
                     className="h-full w-full border border-zinc-800 rounded-md overflow-hidden bg-[#09090b]"
